@@ -1,0 +1,11 @@
+:toc:
+:imagesdir: docs/images
+:homepage: https://github.com/lspaans/docker-experiment
+
+= Docker Experiment
+
+== Description
+
+This is just a simple experiment using Vagrant and Docker based on the
+'node.js'-example on the Docker-site
+(https://docs.docker.com/examples/nodejs_web_app/).
