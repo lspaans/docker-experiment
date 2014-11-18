@@ -8,4 +8,6 @@
 
 This is just a simple experiment using Vagrant and Docker based on the
 'node.js'-example on the Docker-site
-(https://docs.docker.com/examples/nodejs_web_app/).
+(https://docs.docker.com/examples/nodejs_web_app/). Example log-entries
+are sent through the '/dev/log:/dev/log'-mapping to the host-instance of
+'rsyslogd'.

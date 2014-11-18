@@ -32,12 +32,13 @@ EOF
 yum update -y
 
 install_packages \
-    docker-io
+    docker-io \
+    git
 
 chkconfig docker on
 
 service docker start
 
-cd /vagrant/src
+cd /vagrant/dist
 docker build -t vagrant/centos-node-hello .
-docker run -p 49160:8080 -d vagrant/centos-node-hello
+docker run -p 49160:8080 -v /dev/log:/dev/log -d vagrant/centos-node-hello
