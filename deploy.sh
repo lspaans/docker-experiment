@@ -41,4 +41,6 @@ service docker start
 
 cd /vagrant/dist
 docker build -t vagrant/centos-node-hello .
-docker run -p 49160:8080 -v /dev/log:/dev/log -d vagrant/centos-node-hello
+docker run -d -p 8080:80 -v /var/run/docker.sock:/tmp/docker.sock jwilder/nginx-proxy
+docker run -p 49161:8080 -e VIRTUAL_HOST=hello100.localhost -v /dev/log:/dev/log -d vagrant/centos-node-hello
+docker run -p 49162:8080 -e VIRTUAL_HOST=hello101.localhost -v /dev/log:/dev/log -d vagrant/centos-node-hello
